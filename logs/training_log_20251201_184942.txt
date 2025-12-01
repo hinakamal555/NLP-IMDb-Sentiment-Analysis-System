@@ -1,0 +1,115 @@
+============================================================
+MovieSentiment Training
+============================================================
+Start time: 2025-12-01 18:49:42
+
+Loading dataset...
+
+Preprocessing texts...
+Preprocessing completed in 94.74 seconds
+
+============================================================
+Vectorizing texts (TF-IDF)
+============================================================
+TF-IDF Parameters:
+  Max features: 5000
+  N-gram range: (1, 2)
+Vectorization completed in 25.07 seconds
+Training matrix shape: (25000, 5000)
+Testing matrix shape: (25000, 5000)
+Vectorizer saved to models/tfidf_vectorizer.pkl
+
+============================================================
+Training Traditional ML Models
+============================================================
+
+============================================================
+Training Naive Bayes...
+============================================================
+  Training time: 0.02 seconds
+  Train accuracy: 0.8678 (86.78%)
+  Test accuracy: 0.8508 (85.08%)
+  Model saved to: models/naive_bayes.pkl
+
+============================================================
+Training Logistic Regression...
+============================================================
+  Training time: 0.23 seconds
+  Train accuracy: 0.9145 (91.45%)
+  Test accuracy: 0.8809 (88.09%)
+  Model saved to: models/logistic_regression.pkl
+
+============================================================
+Training Svm...
+============================================================
+  Training time: 0.54 seconds
+  Train accuracy: 0.9446 (94.46%)
+  Test accuracy: 0.8688 (86.88%)
+  Model saved to: models/svm.pkl
+
+============================================================
+Training BiLSTM Model
+============================================================
+
+Model parameters:
+  Max vocabulary size: 10000
+  Max sequence length: 200
+  Embedding dimension: 128
+  LSTM units: 64 -> 32
+  Epochs: 3
+  Batch size: 128
+
+Model architecture:
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ embedding (Embedding)           │ ?                      │   0 (unbuilt) │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ bidirectional (Bidirectional)   │ ?                      │   0 (unbuilt) │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ bidirectional_1 (Bidirectional) │ ?                      │   0 (unbuilt) │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ ?                      │   0 (unbuilt) │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout (Dropout)               │ ?                      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ ?                      │   0 (unbuilt) │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 0 (0.00 B)
+ Trainable params: 0 (0.00 B)
+ Non-trainable params: 0 (0.00 B)
+
+
+
+Training BiLSTM...
+
+BiLSTM Training Results:
+  Total training time: 620.61 seconds
+  Final train accuracy: 0.9507 (95.07%)
+  Final validation accuracy: 0.8517 (85.17%)
+
+Epoch-wise training history:
+  Epoch 1: train_acc=0.8115, val_acc=0.8541, train_loss=0.4016, val_loss=0.3381
+  Epoch 2: train_acc=0.9205, val_acc=0.8666, train_loss=0.2167, val_loss=0.3397
+  Epoch 3: train_acc=0.9507, val_acc=0.8517, train_loss=0.1414, val_loss=0.4085
+
+BiLSTM model saved to models/bilstm.h5
+Tokenizer saved to models/bilstm_tokenizer.pkl
+
+============================================================
+TRAINING SUMMARY
+============================================================
+Total training time: 830.92 seconds (13.85 minutes)
+
+Model Performance Summary:
+Model                     Train Acc    Test Acc     Time (s)    
+------------------------------------------------------------
+naive_bayes               0.8678       0.8508       0.02        
+logistic_regression       0.9145       0.8809       0.23        
+svm                       0.9446       0.8688       0.54        
+bilstm                    0.9507       0.8517       620.61      
+
+All models saved to: models/
+End time: 2025-12-01 19:03:33
+============================================================

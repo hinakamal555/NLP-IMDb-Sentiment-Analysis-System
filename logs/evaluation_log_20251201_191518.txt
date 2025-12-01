@@ -1,0 +1,108 @@
+============================================================
+MovieSentiment Model Evaluation
+============================================================
+Start time: 2025-12-01 19:15:18
+
+Loading test dataset...
+
+Preprocessing texts...
+Preprocessed 25000 test samples
+
+============================================================
+Evaluating: Naive Bayes
+============================================================
+
+Metrics:
+  Accuracy:  0.8508 (85.08%)
+  Precision: 0.8517 (85.17%)
+  Recall:    0.8496 (84.96%)
+  F1 Score:  0.8507
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.85      0.85      0.85     12500
+    Positive       0.85      0.85      0.85     12500
+
+    accuracy                           0.85     25000
+   macro avg       0.85      0.85      0.85     25000
+weighted avg       0.85      0.85      0.85     25000
+
+
+============================================================
+Evaluating: Logistic Regression
+============================================================
+
+Metrics:
+  Accuracy:  0.8809 (88.09%)
+  Precision: 0.8776 (87.76%)
+  Recall:    0.8852 (88.52%)
+  F1 Score:  0.8814
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.88      0.88      0.88     12500
+    Positive       0.88      0.89      0.88     12500
+
+    accuracy                           0.88     25000
+   macro avg       0.88      0.88      0.88     25000
+weighted avg       0.88      0.88      0.88     25000
+
+
+============================================================
+Evaluating: Svm
+============================================================
+
+Metrics:
+  Accuracy:  0.8688 (86.88%)
+  Precision: 0.8705 (87.05%)
+  Recall:    0.8665 (86.65%)
+  F1 Score:  0.8685
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.87      0.87      0.87     12500
+    Positive       0.87      0.87      0.87     12500
+
+    accuracy                           0.87     25000
+   macro avg       0.87      0.87      0.87     25000
+weighted avg       0.87      0.87      0.87     25000
+
+
+============================================================
+Evaluating: BiLSTM
+============================================================
+
+Metrics:
+  Accuracy:  0.8517 (85.17%)
+  Precision: 0.8960 (89.60%)
+  Recall:    0.7958 (79.58%)
+  F1 Score:  0.8429
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.82      0.91      0.86     12500
+    Positive       0.90      0.80      0.84     12500
+
+    accuracy                           0.85     25000
+   macro avg       0.86      0.85      0.85     25000
+weighted avg       0.86      0.85      0.85     25000
+
+
+============================================================
+EVALUATION SUMMARY
+============================================================
+Model                     Accuracy     Precision    Recall       F1-Score    
+----------------------------------------------------------------------
+naive_bayes               0.8508       0.8517       0.8496       0.8507      
+logistic_regression       0.8809       0.8776       0.8852       0.8814      
+svm                       0.8688       0.8705       0.8665       0.8685      
+bilstm                    0.8517       0.8960       0.7958       0.8429      
+
+Best performing model: logistic_regression (Accuracy: 0.8809)
+
+End time: 2025-12-01 19:17:18
+============================================================
