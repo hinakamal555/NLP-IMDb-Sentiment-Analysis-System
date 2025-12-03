@@ -10,13 +10,6 @@ Uses the Stanford IMDb movie review dataset (50,000 reviews).
 - Training: 25,000 reviews (12,500 positive, 12,500 negative)
 - Testing: 25,000 reviews (12,500 positive, 12,500 negative)
 
-## System Requirements
-
-- **Python**: 3.12.4 (required)
-- **OS**: Windows 10 / macOS / Linux
-- **RAM**: 8GB minimum, 16GB recommended
-- **Storage**: ~500MB for dataset, ~50MB for models
-
 ## Setup
 
 1. **Create virtual environment (recommended):**
@@ -138,51 +131,14 @@ All training and evaluation runs are automatically logged with timestamps:
 - **Evaluation logs**: `logs/evaluation_log_YYYYMMDD_HHMMSS.txt`
   - Accuracy, precision, recall, F1-score, classification reports
 
-## Environment Information
-
-This project was developed and tested in the following environment:
-
-**Software:**
-- Python: 3.12.4
-- OS: Windows 10
-- Platform: win32
-
-**Hardware (recommended minimum):**
-- CPU: Any modern multi-core processor
-- RAM: 8GB (16GB recommended for BiLSTM)
-- Storage: 1GB free space
-- GPU: Optional (CPU training works, but BiLSTM is slower)
-
-**Key Dependencies:**
-- TensorFlow 2.18.0
-- scikit-learn 1.5.2
-- NLTK 3.9.1
-- NumPy 1.26.4
-- Matplotlib 3.9.2
-
-All versions pinned in `requirements.txt` for reproducibility.
-
 ## How to Reproduce Results
 
 This project is configured for **full reproducibility** with fixed random seeds and pinned dependencies.
-
-### Complete Reproduction Steps
-
-1. **Setup environment** (see Setup section above)
 
 2. **Train all models:**
 ```bash
 python src/train.py
 ```
-
-This trains 4 models:
-- Naive Bayes (85.08% accuracy)
-- Logistic Regression (88.09% accuracy) ⭐ **BEST**
-- SVM (86.88% accuracy)
-- BiLSTM (85.17% accuracy)
-
-Training takes approximately 10-15 minutes (BiLSTM requires most time).
-
 3. **Evaluate models:**
 ```bash
 python src/evaluate.py
