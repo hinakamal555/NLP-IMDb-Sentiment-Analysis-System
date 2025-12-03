@@ -1,0 +1,29 @@
+======================================================================
+Classification Report - Svm
+IMDb Sentiment Analysis System
+======================================================================
+
+Model Performance Metrics:
+----------------------------------------------------------------------
+Accuracy:  0.8688 (86.88%)
+Precision: 0.8705 (87.05%)
+Recall:    0.8665 (86.65%)
+F1-Score:  0.8685
+
+Detailed Classification Report:
+----------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    Negative     0.8671    0.8711    0.8691     12500
+    Positive     0.8705    0.8665    0.8685     12500
+
+    accuracy                         0.8688     25000
+   macro avg     0.8688    0.8688    0.8688     25000
+weighted avg     0.8688    0.8688    0.8688     25000
+
+Confusion Matrix:
+----------------------------------------------------------------------
+                    Predicted
+                 Negative    Positive
+Actual Negative     10889        1611
+       Positive      1669       10831

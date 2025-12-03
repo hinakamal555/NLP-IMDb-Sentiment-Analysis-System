@@ -1,0 +1,17 @@
+Metric,Value
+Model,svm
+""
+Overall Metrics,
+Accuracy,0.8688
+Precision (Weighted),0.8705
+Recall (Weighted),0.8665
+F1-Score (Weighted),0.8685
+""
+Class,Precision,Recall,F1-Score,Support
+Negative,0.8671,0.8711,0.8691,12500
+Positive,0.8705,0.8665,0.8685,12500
+""
+Confusion Matrix,
+,Predicted Negative,Predicted Positive
+Actual Negative,10889,1611
+Actual Positive,1669,10831

@@ -1,6 +1,8 @@
 """
 Evaluate trained sentiment analysis models.
 Reports accuracy, precision, recall, and F1 score.
+
+Fixed random seeds ensure reproducibility across runs.
 """
 
 import sys
@@ -9,6 +11,10 @@ import numpy as np
 from datetime import datetime
 from pathlib import Path
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
+
+# Set random seeds for reproducibility
+RANDOM_SEED = 42
+np.random.seed(RANDOM_SEED)
 
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))

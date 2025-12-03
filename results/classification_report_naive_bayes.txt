@@ -1,0 +1,29 @@
+======================================================================
+Classification Report - Naive Bayes
+IMDb Sentiment Analysis System
+======================================================================
+
+Model Performance Metrics:
+----------------------------------------------------------------------
+Accuracy:  0.8508 (85.08%)
+Precision: 0.8517 (85.17%)
+Recall:    0.8496 (84.96%)
+F1-Score:  0.8507
+
+Detailed Classification Report:
+----------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    Negative     0.8500    0.8521    0.8510     12500
+    Positive     0.8517    0.8496    0.8507     12500
+
+    accuracy                         0.8508     25000
+   macro avg     0.8508    0.8508    0.8508     25000
+weighted avg     0.8508    0.8508    0.8508     25000
+
+Confusion Matrix:
+----------------------------------------------------------------------
+                    Predicted
+                 Negative    Positive
+Actual Negative     10651        1849
+       Positive      1880       10620

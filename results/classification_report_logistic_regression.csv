@@ -1,0 +1,17 @@
+Metric,Value
+Model,logistic_regression
+""
+Overall Metrics,
+Accuracy,0.8809
+Precision (Weighted),0.8776
+Recall (Weighted),0.8852
+F1-Score (Weighted),0.8814
+""
+Class,Precision,Recall,F1-Score,Support
+Negative,0.8842,0.8766,0.8804,12500
+Positive,0.8776,0.8852,0.8814,12500
+""
+Confusion Matrix,
+,Predicted Negative,Predicted Positive
+Actual Negative,10957,1543
+Actual Positive,1435,11065

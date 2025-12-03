@@ -1,0 +1,29 @@
+======================================================================
+Classification Report - Logistic Regression
+IMDb Sentiment Analysis System
+======================================================================
+
+Model Performance Metrics:
+----------------------------------------------------------------------
+Accuracy:  0.8809 (88.09%)
+Precision: 0.8776 (87.76%)
+Recall:    0.8852 (88.52%)
+F1-Score:  0.8814
+
+Detailed Classification Report:
+----------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+    Negative     0.8842    0.8766    0.8804     12500
+    Positive     0.8776    0.8852    0.8814     12500
+
+    accuracy                         0.8809     25000
+   macro avg     0.8809    0.8809    0.8809     25000
+weighted avg     0.8809    0.8809    0.8809     25000
+
+Confusion Matrix:
+----------------------------------------------------------------------
+                    Predicted
+                 Negative    Positive
+Actual Negative     10957        1543
+       Positive      1435       11065

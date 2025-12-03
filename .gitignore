@@ -13,10 +13,6 @@ ENV/
 data/aclImdb/
 data/aclImdb_v1.tar.gz
 
-# Models (large binary files)
-models/*.pkl
-models/*.h5
-
 # IDE
 .vscode/
 .idea/

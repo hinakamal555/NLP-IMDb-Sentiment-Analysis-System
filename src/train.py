@@ -1,6 +1,8 @@
 """
 Train sentiment analysis models on movie reviews.
 Supports: Naive Bayes, Logistic Regression, SVM, and BiLSTM.
+
+Fixed random seeds ensure reproducibility across runs.
 """
 
 import os
@@ -15,6 +17,17 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
 from sklearn.model_selection import train_test_split
+
+# Set random seeds for reproducibility
+RANDOM_SEED = 42
+np.random.seed(RANDOM_SEED)
+
+# Set TensorFlow seed (if available)
+try:
+    import tensorflow as tf
+    tf.random.set_seed(RANDOM_SEED)
+except ImportError:
+    pass
 
 # Add parent directory to path for imports
 sys.path.append(str(Path(__file__).parent.parent))
@@ -236,6 +249,7 @@ def main():
     log_message("MovieSentiment Training")
     log_message("="*60)
     log_message(f"Start time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    log_message(f"Random seed: {RANDOM_SEED} (for reproducibility)")
     log_message("")
     
     # Load and preprocess data
