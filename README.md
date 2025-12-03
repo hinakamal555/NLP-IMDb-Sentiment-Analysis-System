@@ -110,11 +110,8 @@ NLP-IMDb-Sentiment-Analysis-System/
 ├── logs/                     # Training & evaluation logs
 │   ├── training_log_*.txt
 │   └── evaluation_log_*.txt
-├── config.yaml               # Hyperparameters configuration
 ├── requirements.txt          # Pinned dependencies
 ├── generate_results.py       # Generate evaluation artifacts
-├── generate_confusion_matrix.py  # Standalone confusion matrix generator
-├── PROJECT_REPORT.md         # Detailed project report
 └── README.md                 # This file
 ```
 
