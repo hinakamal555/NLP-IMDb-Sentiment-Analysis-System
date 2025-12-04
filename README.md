@@ -168,53 +168,6 @@ All outputs saved to `results/` folder.
 
 See `results/` folder for detailed reports and confusion matrices.
 
-### Model Hyperparameters
-
-All hyperparameters are documented in `config.yaml`. Key settings:
-
-**Preprocessing:**
-- TF-IDF with max 5,000 features
-- N-gram range: (1, 2) - unigrams and bigrams
-- Stopword removal + lemmatization
-
-**Logistic Regression (Best Model):**
-- C (inverse regularization): 1.0
-- Penalty: L2
-- Solver: lbfgs
-- Max iterations: 1000
-- Random state: 42
-
-**SVM:**
-- C: 1.0
-- Kernel: Linear (LinearSVC)
-- Penalty: L2
-- Max iterations: 2000
-- Random state: 42
-
-**Naive Bayes:**
-- Type: MultinomialNB
-- Alpha (smoothing): 1.0 (Laplace smoothing)
-
-**BiLSTM:**
-- Vocabulary size: 10,000
-- Sequence length: 200
-- Embedding dimension: 128
-- LSTM units: 64 → 32 (bidirectional)
-- Dropout: 0.5
-- Epochs: 3
-- Batch size: 128
-- Optimizer: Adam
-
-### Reproducibility Notes
-
-- **Random Seed**: 42 (fixed across all models)
-- **Python Version**: 3.12.4
-- **Package Versions**: Pinned in `requirements.txt`
-- **Dataset**: Stanford IMDb (deterministic split)
-- **Environment**: All settings in `config.yaml`
-
-Running the same code with the same dependencies will produce **identical results** (±0.01% due to floating-point precision).
-
 ## Requirements
 
 - Python 3.12.4 (exact version recommended)
